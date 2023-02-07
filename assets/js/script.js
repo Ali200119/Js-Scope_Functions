@@ -1,3 +1,5 @@
+"use strict"
+
 // Task1 --------------- Verilmiş n - ədədinin 3-ə və 7-ə bölünüb-bölünməməsini tapan bir function yazin
 
 // Regular function
@@ -115,7 +117,7 @@ let factorialAF = (positive) => {
 // Regular function
 
 function sum(array) {
-    sum = 0;
+    let sum = 0;
 
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
@@ -137,7 +139,7 @@ function sum(array) {
 // Arrow function
 
 let sumAF = (array) => {
-    sum = 0;
+    let sum = 0;
 
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
@@ -156,11 +158,11 @@ let sumAF = (array) => {
     console.log(`The sum of the squares of the even numbers in the array is ${sum}`);
 }
 
-let array = [1, 2, 3, 4, 5, 6, 7];
+let array1 = [1, 2, 3, 4, 5, 6, 7];
 
-// sum(array);
+// sum(array1);
 
-// sumAF(array)
+// sumAF(array1);
 
 
 
@@ -195,3 +197,115 @@ let authenticationAF = (email, password) => {
 // authentication("cavid@code.edu.az", "12345");
 
 // authenticationAF("cavid@code.edu.az", "12345");
+
+
+
+
+
+// Task5 --------------- Functiona ededlerden ibaret array gelir, function hemin arraydaki tek ededlerin cemini qaytarmalidir
+
+// Regular function
+
+function sumOfOdds(array) {
+    let sum = 0;
+    
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+
+        if (typeof element == "number") {
+            if (element % 2 != 0) {
+                sum += element;
+            }
+        }
+        
+        else {
+            console.log(`${element} is not a number`);
+        }
+    }
+
+    console.log(`The sum of the odd numbers in the array is ${sum}`);
+}
+
+// Arrow function
+
+let sumOfOddsAF = (array) => {
+    let sum = 0;
+    
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+
+        if (typeof element == "number") {
+            if (element % 2 != 0) {
+                sum += element;
+            }
+        }
+        
+        else {
+            console.log(`${element} is not a number`);
+        }
+    }
+
+    console.log(`The sum of the odd numbers in the array is ${sum}`);
+}
+
+let array2 = [78,7, 2, 1, 12, 23];
+
+// sumOfOdds(array2);
+
+// sumOfOddsAF(array2);
+
+
+
+
+
+// Task6 --------------- Functiona ededlerden ibaret array gelir, function hemin arraydaki cut ededlerin sayini qaytarmalidir
+
+// Regular function
+
+function countOfEvens(array) {
+    let count = 0;
+    
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+
+        if (typeof element == "number") {
+            if (element % 2 == 0) {
+                count++;
+            }
+        }
+        
+        else {
+            console.log(`${element} is not a number`);
+        }
+    }
+
+    console.log(`The count of the even numbers in the array is ${count}`);
+}
+
+// Arrow function
+
+let countOfEvensAF = (array) => {
+    let count = 0;
+    
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+
+        if (typeof element == "number") {
+            if (element % 2 == 0) {
+                count++;
+            }
+        }
+        
+        else {
+            console.log(`${element} is not a number`);
+        }
+    }
+
+    console.log(`The count of the even numbers in the array is ${count}`);
+}
+
+let array3 = [44,23, 43, 7, 8, 20, 17];
+
+// countOfEvens(array3);
+
+// countOfEvensAF(array3);
