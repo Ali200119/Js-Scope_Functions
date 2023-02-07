@@ -166,6 +166,32 @@ let array = [1, 2, 3, 4, 5, 6, 7];
 
 
 
-// Task4 --------------- Her hansisa number elementleri olan arayin icindeki cut ededlerin kvadratlarinin cemini hesablayan bir function yazin
+// Task4 --------------- Funtiona-a  mail ve password gelir. Mail beraberdirse cavid@code.edu.az -a ve password beraberdirse 12345 -e, ekranda "Girish olundu" yazilsin, eks halda "Mail ve yaxud password sehvdir" yazilsin
 
 // Regular function
+
+function authentication (email, password) {
+    if (email == "cavid@code.edu.az" && password == "12345") {
+        console.log("Login success");
+    }
+
+    else {
+        console.log("Email or password is wrong");
+    }
+}
+
+// Arrow function
+
+let authenticationAF = (email, password) => {
+    if (email == "cavid@code.edu.az" && password == "12345") {
+        console.log("Login success");
+    }
+
+    else {
+        console.log("Email or password is wrong");
+    }
+}
+
+// authentication("cavid@code.edu.az", "12345");
+
+// authenticationAF("cavid@code.edu.az", "12345");
